@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of https://kronosbio.com
+host: https://kronosbio.com
+result: none
+# NEGATIVE RESULT — recorded so future rounds do not re-harvest false positives.
+# kronosbio.com is served by a GoDaddy domain-parking lander (window.LANDER_SYSTEM="PW",
+# _trfd ap:"parking") that answers HTTP 200 with text/html for EVERY path, including
+# paths that cannot exist. A control request to /this-path-does-not-exist-9f8a7b returned
+# byte-identical content (md5 e89f75f918dbdcee28604d4e09dd71d7) to /.well-known/security.txt,
+# proving the 200s are a wildcard, not real discovery documents. No file was saved and no
+# WellKnown or SecurityTxt pointer was wired into apis.yml.
+wildcard_parking: true
+control_probe:
+  path: /this-path-does-not-exist-9f8a7b
+  status: 200
+  md5: e89f75f918dbdcee28604d4e09dd71d7
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  content_type: text/html
+  valid: false
+  note: byte-identical to control probe; parking lander, not RFC 9116
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: text/html
+  valid: false
+  note: parking lander wildcard
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: text/html
+  valid: false
+  note: parking lander wildcard
+- path: /.well-known/api-catalog
+  status: 200
+  content_type: text/html
+  valid: false
+  note: parking lander wildcard
+- path: /.well-known/ai-plugin.json
+  status: 200
+  content_type: text/html
+  valid: false
+  note: parking lander wildcard
+- path: /llms.txt
+  status: 200
+  content_type: text/html
+  valid: false
+  note: parking lander wildcard
