@@ -1,8 +1,25 @@
 aid: kronos-bio
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kronos-bio.png
 name: Kronos Bio *
-description: 'Kronos Bio * is a company surfaced as a portfolio company of gv and added to the API Evangelist
-  network as a stub for enrichment. Sector: life-sciences. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Kronos Bio was a clinical-stage biopharmaceutical company in the life-sciences sector,
+  backed by GV, working on cancer therapeutics. It surfaced in the API Evangelist network as a GV
+  portfolio lead. The company operates no public API, developer portal, SDK, or technical
+  documentation surface. A live probe on 2026-07-19 found that kronosbio.com no longer hosts a
+  corporate website: the apex and www hosts both return a GoDaddy domain-parking lander that answers
+  HTTP 200 for every path, and the ir, docs, api, and developer subdomains do not resolve at all. No
+  GitHub organization or public repositories were found. This profile is retained as a network record
+  of a company with no API surface rather than as an active API provider.'
 url: https://raw.githubusercontent.com/api-evangelist/kronos-bio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +27,19 @@ x-backed-by:
 - gv
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment-status: no-api-surface
+x-website-status: parked
+x-last-probed: '2026-07-19'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Life Sciences
+- Biotechnology
+- Oncology
+- Pharmaceuticals
+- Drug Discovery
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +47,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/kronos-bio-domain-security.yml
 - type: Website
-  url: http://kronosbio.com
+  url: https://kronosbio.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
