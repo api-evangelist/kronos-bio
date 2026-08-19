@@ -30,7 +30,7 @@ x-tier-reason: portfolio-lead
 x-enrichment-status: no-api-surface
 x-website-status: parked
 x-last-probed: '2026-07-19'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
