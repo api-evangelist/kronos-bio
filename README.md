@@ -64,23 +64,79 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kronos Bio was a clinical-stage biopharmaceutical company in the life-sciences sector, backed by GV,
-working on cancer therapeutics. It entered the API Evangelist network as a GV portfolio lead.
+Kronos Bio was a clinical-stage biopharmaceutical company in the life-sciences sector, backed by GV, working on cancer therapeutics. It surfaced in the API Evangelist network as a GV portfolio lead. The company operates no public API, developer portal, SDK, or technical documentation surface. A live probe on 2026-07-19 found that kronosbio.com no longer hosts a corporate website: the apex and www hosts both return a GoDaddy domain-parking lander that answers HTTP 200 for every path, and the ir, docs, api, and developer subdomains do not resolve at all. No GitHub organization or public repositories were found. This profile is retained as a network record of a company with no API surface rather than as an active API provider.
 
-## Enrichment status: no API surface
+**Areas:** Company · Life Sciences · Biotechnology · Oncology · Pharmaceuticals · Drug Discovery
 
-The enrichment pipeline ran on 2026-07-19 and found no API, developer portal, SDK, or documentation
-surface to harvest:
+## Kronos Bio * on APIs.io
 
-- `kronosbio.com` and `www.kronosbio.com` both return a GoDaddy domain-parking lander.
-- The lander answers HTTP 200 with `text/html` for **every** path. A control request to a
-  nonsense path returned byte-identical content to `/.well-known/security.txt`, so the apparent
-  `/.well-known/*` and `/llms.txt` hits are a wildcard, not real documents. See
-  `well-known/kronos-bio-well-known.yml` for that negative result.
-- `ir.`, `docs.`, `api.`, and `developer.` subdomains do not resolve.
-- No GitHub organization or public repositories were found.
+Everything profiled for Kronos Bio * is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kronos-bio/](https://apis.io/providers/kronos-bio/)** — or go straight to one of the APIs or properties below.
 
-The only real artifact harvested is `security/kronos-bio-domain-security.yml` — live DNS/TLS posture
-for the parked domain.
+### Published properties
 
-Backed by: gv — https://kronosbio.com
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kronos Bio Domain Security](https://apis.io/security/kronos-bio/kronos-bio-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://kronosbio.com)
+
+## API Evangelist rating
+
+**Kin Score 3.7** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kronos-bio/](https://apis.io/providers/kronos-bio/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kronos Bio *: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kronos-bio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
